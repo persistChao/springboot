@@ -1,0 +1,18 @@
+server:
+  port: 8088
+
+#thymeleaf默认配置
+spring:
+  thymeleaf:
+    cache: true
+    check-template: true
+    content-type: text/html
+    enabled: true
+    encoding: utf-8
+#    excluded-view-names:
+    mode: HTML5
+    prefix: classpath:/templates/
+    suffix: .html
+#    template-resolver-order:
+
+
