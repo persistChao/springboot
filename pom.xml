@@ -13,6 +13,7 @@
         <module>spring-boot-config</module>
         <module>restful-api</module>
         <module>swagger2</module>
+        <module>spring-boot-jdbcTemplate</module>
     </modules>
 
     <parent>
