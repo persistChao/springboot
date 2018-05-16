@@ -23,6 +23,5 @@ public class ApplicationTest {
         userService.create("a" , 1);
         userService.create("b" , 2);
         userService.create("c" , 3);
-        userService.create("d" , 4);
     }
 }
