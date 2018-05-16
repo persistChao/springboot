@@ -20,8 +20,4 @@ public class UserController {
         return "create user succss" ;
     }
 
-    @GetMapping("/del")
-    public String deleteUser() {
-        return "";
-    }
 }
