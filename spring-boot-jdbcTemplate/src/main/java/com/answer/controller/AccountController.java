@@ -5,9 +5,7 @@ import cn.hutool.log.LogFactory;
 import com.answer.model.Account;
 import com.answer.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -30,6 +28,13 @@ public class AccountController {
     public List<Account> getAccounts() {
         log.info("查询所有account信息");
         return accountService.findAccountList();
+    }
+
+    @PostMapping("/save")
+    public String save(@RequestBody  Account account) {
+        int i = accountService.add(account);
+        log.info("插入成功条数 i={}" , i);
+        return "success";
     }
 
 }
