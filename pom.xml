@@ -19,10 +19,11 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.10.RELEASE</version>
+        <version>1.5.18.RELEASE</version>
     </parent>
 
     <properties>
+
         <maven.compile.source>1.8</maven.compile.source>
         <maven.compile.target>1.8</maven.compile.target>
     </properties>
