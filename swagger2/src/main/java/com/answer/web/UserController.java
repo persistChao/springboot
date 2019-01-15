@@ -13,17 +13,20 @@ public class UserController {
 
     static Map<Long , User> users = Collections.synchronizedMap(new HashMap<>());
     @ApiOperation(value = "获取用户列表" ,notes = "")
-    @GetMapping("/")
+    @GetMapping("/list")
     public List<User> list() {
         // 处理"/users/"的GET请求，用来获取用户列表
         // 还可以通过@RequestParam从页面中传递参数来进行查询条件或者翻页信息的传递
         List<User> r = new ArrayList<>(users.values());
+        for (Map.Entry<Long,User> entry : users.entrySet()) {
+            r.add(entry.getValue());
+        }
         return r;
     }
 
     @ApiOperation(value="创建用户", notes="根据User对象创建用户")
     @ApiImplicitParam(name = "user", value = "用户详细实体user", required = true, dataType = "User")
-    @PostMapping("/")
+    @PostMapping("/save")
     public String postUser(@ModelAttribute User user) {
         // 处理"/users/"的POST请求，用来创建User
         // 除了@ModelAttribute绑定参数之外，还可以通过@RequestParam从页面中传递参数
