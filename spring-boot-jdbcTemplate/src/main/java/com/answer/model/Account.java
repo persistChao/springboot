@@ -3,10 +3,9 @@ package com.answer.model;
 /**
  * @descreption
  * @Author answer
- * @Date 2019/1/15 20 32
+ * @Date 2019/1/30 18 02
  */
 public class Account {
-
     private String name;
 
     private int id;
