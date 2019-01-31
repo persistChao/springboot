@@ -20,6 +20,7 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.core.io.DefaultResourceLoader;
 import org.springframework.core.io.support.ResourcePatternResolver;
 import org.springframework.core.io.support.ResourcePatternUtils;
+import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 
 import javax.sql.DataSource;
 import java.io.IOException;
@@ -101,5 +102,12 @@ public class BeatlsqlConfig {
         return DataSourceBuilder.create().url("jdbc:mysql://127.0.0.1:3306/spring-cloud").username("root").password("root").build();
     }
 
+
+    @Bean(name = "txManager")
+    public DataSourceTransactionManager getDataSourceTransactionManager(@Qualifier("datasource") DataSource datasource) {
+        DataSourceTransactionManager dsm = new DataSourceTransactionManager();
+        dsm.setDataSource(datasource);
+        return dsm;
+    }
 
 }
