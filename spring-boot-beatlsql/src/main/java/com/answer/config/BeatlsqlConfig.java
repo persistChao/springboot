@@ -13,7 +13,6 @@ import org.beetl.sql.ext.spring4.BeetlSqlScannerConfigurer;
 import org.beetl.sql.ext.spring4.SqlManagerFactoryBean;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceBuilder;
-import org.springframework.boot.autoconfigure.transaction.PlatformTransactionManagerCustomizer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
