@@ -28,7 +28,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(MyException.class)
     @ResponseBody
     public ErrorInfo<String> jsonErrorHandler(HttpServletRequest request , MyException e) throws Exception {
-        ErrorInfo<String > r = new ErrorInfo<String>();
+        ErrorInfo<String > r = new ErrorInfo<>();
         r.setCode(ErrorInfo.ERROR);
         r.setMessage(e.getMessage());
         r.setUrl(request.getRequestURL().toString());

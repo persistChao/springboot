@@ -90,4 +90,8 @@
       nick_name = #{nickName,jdbcType=VARCHAR}
     where id = #{id,jdbcType=BIGINT}
   </update>
+
+  <select id="selectList" resultMap="BaseResultMap">
+    SELECT <include refid="Base_Column_List"/> FROM users
+  </select>
 </mapper>
