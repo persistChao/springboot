@@ -1,14 +1,22 @@
 package com.answer.mapper.test2;
 
-import com.answer.mapper.MyBatisBaseDao;
 import com.answer.model.Student;
-
-import java.util.List;
 
 /**
  * StudentMapper2继承基类
  */
-public interface StudentMapper2 extends MyBatisBaseDao<Student, Long> {
+public interface StudentMapper2 {
 
-    List<Student> selectAll();
+    int deleteByPrimaryKey(long id);
+
+    int insert(Student record);
+
+    int insertSelective(Student record);
+
+    Student selectByPrimaryKey(long id);
+
+    int updateByPrimaryKeySelective(Student record);
+
+    int updateByPrimaryKey(Student record);
+
 }

@@ -80,7 +80,4 @@
     where id = #{id,jdbcType=BIGINT}
   </update>
 
-  <select id="selectAll" resultMap="BaseResultMap">
-    SELECT <include refid="Base_Column_List"/> FROM student
-  </select>
 </mapper>
