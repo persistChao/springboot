@@ -15,6 +15,7 @@
         <module>swagger2</module>
         <module>spring-boot-jdbcTemplate</module>
         <module>spring-boot-mybatis</module>
+        <module>spring-boot-mybatis-mulidatasource</module>
     </modules>
 
     <parent>
