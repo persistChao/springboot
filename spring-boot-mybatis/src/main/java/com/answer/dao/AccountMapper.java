@@ -10,7 +10,7 @@ import java.util.List;
  * @Author answer
  * @Date 2019/2/1 15 55
  */
-@Mapper
+//@Mapper
 public interface AccountMapper {
 
     @Insert("insert into account(name , money) values(#{name} , #{money}) ")
