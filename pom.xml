@@ -16,6 +16,7 @@
         <module>spring-boot-jdbcTemplate</module>
         <module>spring-boot-mybatis</module>
         <module>spring-boot-mybatis-mulidatasource</module>
+        <module>spring-boot-cache</module>
     </modules>
 
     <parent>
