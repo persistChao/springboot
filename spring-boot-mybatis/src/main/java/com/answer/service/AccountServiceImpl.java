@@ -42,4 +42,9 @@ public class AccountServiceImpl implements AccountService{
     public List<Account> findAccountList() {
         return accountMapper.findAllAccountList();
     }
+
+    @Override
+    public Account findByName(String name) {
+        return accountMapper.findByName(name);
+    }
 }

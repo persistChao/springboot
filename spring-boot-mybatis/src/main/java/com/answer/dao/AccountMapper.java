@@ -10,7 +10,7 @@ import java.util.List;
  * @Author answer
  * @Date 2019/2/1 15 55
  */
-//@Mapper
+
 public interface AccountMapper {
 
     @Insert("insert into account(name , money) values(#{name} , #{money}) ")
@@ -27,4 +27,8 @@ public interface AccountMapper {
 
     @Select("select id, name as name, money as money from account where id = #{id}")
     Account findAccount(@Param("id") int id);
+
+
+    @Select("select id id , name name ,money money from account where name=#{name} limit 1")
+    Account findByName(@Param("name") String name);
 }

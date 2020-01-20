@@ -22,4 +22,6 @@ public interface AccountService {
 
     List<Account> findAccountList();
 
+    Account findByName(String name);
+
 }

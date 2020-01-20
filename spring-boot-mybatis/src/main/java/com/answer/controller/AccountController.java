@@ -1,5 +1,6 @@
 package com.answer.controller;
 
+import com.alibaba.fastjson.JSON;
 import com.answer.entity.Account;
 import com.answer.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -48,13 +49,14 @@ public class AccountController {
 
     }
 
-    @RequestMapping(value = "", method = RequestMethod.POST)
+    @RequestMapping(value = "/add")
     public String postAccount(@RequestParam(value = "name") String name,
                               @RequestParam(value = "money") double money) {
 
         int t= accountService.add(name,money);
         if(t==1) {
-            return "success";
+            Account account = accountService.findByName(name);
+            return JSON.toJSONString(account);
         }else {
             return "fail";
         }
