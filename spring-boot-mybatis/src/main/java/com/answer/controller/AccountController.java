@@ -32,18 +32,18 @@ public class AccountController {
     }
 
     @PutMapping("/{id}")
-    public Account updateAccount(@PathVariable("id") int id , @RequestParam("name") String name
+    public Account updateAccount(@PathVariable("id") int id, @RequestParam("name") String name
             , @RequestParam("money") double money) {
         accountService.update(name, money, id);
         return accountService.findAccount(id);
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
-    public String delete(@PathVariable(value = "id")int id) {
-        int t= accountService.delete(id);
-        if(t==1) {
+    public String delete(@PathVariable(value = "id") int id) {
+        int t = accountService.delete(id);
+        if (t == 1) {
             return "success";
-        }else {
+        } else {
             return "fail";
         }
 
@@ -53,11 +53,11 @@ public class AccountController {
     public String postAccount(@RequestParam(value = "name") String name,
                               @RequestParam(value = "money") double money) {
 
-        int t= accountService.add(name,money);
-        if(t==1) {
+        int t = accountService.add(name, money);
+        if (t == 1) {
             Account account = accountService.findByName(name);
             return JSON.toJSONString(account);
-        }else {
+        } else {
             return "fail";
         }
 

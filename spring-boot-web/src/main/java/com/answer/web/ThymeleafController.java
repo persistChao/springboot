@@ -9,7 +9,7 @@ public class ThymeleafController {
 
     @RequestMapping("/thymeleaf")
     public String index(ModelMap map) {
-        map.addAttribute("hosts" , "http://www.springcloud.cc");
+        map.addAttribute("hosts", "http://www.springcloud.cc");
         return "index";
     }
 }

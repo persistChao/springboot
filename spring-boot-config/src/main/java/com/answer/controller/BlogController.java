@@ -17,7 +17,7 @@ public class BlogController {
 
 //        BlogProperties blogProperties = new BlogProperties();
         String blogstr = JSON.toJSONString(blogProperties);
-        String s =  "blog name is " + blogProperties.getName() + " , blog title is " + blogProperties.getTitle() + " desc is " + blogProperties.getDesc();
+        String s = "blog name is " + blogProperties.getName() + " , blog title is " + blogProperties.getTitle() + " desc is " + blogProperties.getDesc();
         System.out.println("=============================" + s);
         return blogstr;
     }

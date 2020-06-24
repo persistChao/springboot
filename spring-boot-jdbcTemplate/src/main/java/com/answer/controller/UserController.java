@@ -13,11 +13,11 @@ public class UserController {
 
     @GetMapping("/cre")
     public String creatUser() {
-        userService.create("a" , 1);
-        userService.create("b" , 2);
-        userService.create("c" , 3);
-        userService.create("d" , 4);
-        return "create user succss" ;
+        userService.create("a", 1);
+        userService.create("b", 2);
+        userService.create("c", 3);
+        userService.create("d", 4);
+        return "create user succss";
     }
 
 }

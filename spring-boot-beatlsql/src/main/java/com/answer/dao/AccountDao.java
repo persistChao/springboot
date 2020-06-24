@@ -9,7 +9,7 @@ import org.beetl.sql.core.mapper.BaseMapper;
  * @Author answer
  * @Date 2019/1/31 18 07
  */
-public interface AccountDao extends BaseMapper<Account>{
+public interface AccountDao extends BaseMapper<Account> {
 
     @SqlStatement(params = "name")
     Account selectAccountByName(String name);

@@ -13,6 +13,7 @@ public interface AccountService {
 
     /**
      * 添加
+     *
      * @param account
      * @return
      */
@@ -20,6 +21,7 @@ public interface AccountService {
 
     /**
      * 更新
+     *
      * @param account
      * @return
      */

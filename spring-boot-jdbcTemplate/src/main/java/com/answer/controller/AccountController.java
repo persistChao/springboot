@@ -31,9 +31,9 @@ public class AccountController {
     }
 
     @PostMapping("/save")
-    public String save(@RequestBody  Account account) {
+    public String save(@RequestBody Account account) {
         int i = accountService.add(account);
-        log.info("插入成功条数 i={}" , i);
+        log.info("插入成功条数 i={}", i);
         return "success";
     }
 

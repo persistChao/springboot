@@ -9,7 +9,7 @@ import java.util.*;
 @RequestMapping("/users")
 public class UserController {
 
-    static Map<Long , User> users = Collections.synchronizedMap(new HashMap<>());
+    static Map<Long, User> users = Collections.synchronizedMap(new HashMap<>());
 
     @GetMapping("/")
     public List<User> list() {
@@ -34,7 +34,7 @@ public class UserController {
         return users.get(id);
     }
 
-    @RequestMapping(value="/{id}", method=RequestMethod.PUT)
+    @RequestMapping(value = "/{id}", method = RequestMethod.PUT)
     public String putUser(@PathVariable Long id, @ModelAttribute User user) {
         // 处理"/users/{id}"的PUT请求，用来更新User信息
         User u = users.get(id);
@@ -44,7 +44,7 @@ public class UserController {
         return "success";
     }
 
-    @RequestMapping(value="/{id}", method=RequestMethod.DELETE)
+    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
     public String deleteUser(@PathVariable Long id) {
         // 处理"/users/{id}"的DELETE请求，用来删除User
         users.remove(id);

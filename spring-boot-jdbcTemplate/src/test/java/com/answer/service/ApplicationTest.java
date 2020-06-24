@@ -20,8 +20,8 @@ public class ApplicationTest {
 
     @Test
     public void test() {
-        userService.create("a" , 1);
-        userService.create("b" , 2);
-        userService.create("c" , 3);
+        userService.create("a", 1);
+        userService.create("b", 2);
+        userService.create("c", 3);
     }
 }

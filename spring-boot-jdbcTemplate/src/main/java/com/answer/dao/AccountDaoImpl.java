@@ -22,22 +22,22 @@ public class AccountDaoImpl implements AccountDao {
 
     @Override
     public int add(Account account) {
-        return jdbcTemplate.update("INSERT INTO account(name , money) VALUES (?,?)" , account.getName() , account.getMoney());
+        return jdbcTemplate.update("INSERT INTO account(name , money) VALUES (?,?)", account.getName(), account.getMoney());
     }
 
     @Override
     public int update(Account account) {
-        return jdbcTemplate.update("UPDATE account SET name = ? , money=? WHERE id = ?" , account.getName() , account.getMoney() , account.getId());
+        return jdbcTemplate.update("UPDATE account SET name = ? , money=? WHERE id = ?", account.getName(), account.getMoney(), account.getId());
     }
 
     @Override
     public int delete(int id) {
-        return jdbcTemplate.update("DELETE FROM account WHERE id = ?" , id);
+        return jdbcTemplate.update("DELETE FROM account WHERE id = ?", id);
     }
 
     @Override
     public Account findByAccountId(int id) {
-        List<Account> list = jdbcTemplate.query("select * from account WHERE id = ?" , new Object[]{id} , new BeanPropertyRowMapper<>(Account.class));
+        List<Account> list = jdbcTemplate.query("select * from account WHERE id = ?", new Object[]{id}, new BeanPropertyRowMapper<>(Account.class));
         if (Objects.nonNull(list) && list.size() > 0) {
             Account account = list.get(0);
             return account;
@@ -48,9 +48,9 @@ public class AccountDaoImpl implements AccountDao {
     @Override
     public List<Account> findAccountList() {
         List<Account> list = jdbcTemplate.query("select * from account", new Object[]{}, new BeanPropertyRowMapper(Account.class));
-        if(list!=null && list.size()>0){
+        if (list != null && list.size() > 0) {
             return list;
-        }else{
+        } else {
             return null;
         }
     }

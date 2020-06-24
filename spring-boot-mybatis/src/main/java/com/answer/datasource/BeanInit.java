@@ -6,10 +6,10 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public  class BeanInit {
+public class BeanInit {
 
     @Bean(value = "paranetDataSource")
-    public  DataSource initDataSource() {
+    public DataSource initDataSource() {
         DataSource dataSource = new DataSource();
         dataSource.setDefaultAutoCommit(true);
         dataSource.setMaxWait(1000);

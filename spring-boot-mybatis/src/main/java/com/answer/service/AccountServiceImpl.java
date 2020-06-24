@@ -13,19 +13,19 @@ import java.util.List;
  * @Date 2019/2/1 16 02
  */
 @Service
-public class AccountServiceImpl implements AccountService{
+public class AccountServiceImpl implements AccountService {
 
     @Autowired
     AccountMapper accountMapper;
 
     @Override
     public int add(String name, double money) {
-        return accountMapper.add(name , money);
+        return accountMapper.add(name, money);
     }
 
     @Override
     public int update(String name, double money, int id) {
-        return accountMapper.update(name , money, id);
+        return accountMapper.update(name, money, id);
     }
 
     @Override

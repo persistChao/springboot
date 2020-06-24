@@ -3,6 +3,7 @@ package com.answer.service;
 public interface UserService {
     /**
      * 新增一个用户
+     *
      * @param name
      * @param age
      */
@@ -10,6 +11,7 @@ public interface UserService {
 
     /**
      * 根据name删除一个用户高
+     *
      * @param name
      */
     void deleteByName(String name);

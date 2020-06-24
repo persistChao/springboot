@@ -24,6 +24,7 @@ public class UserController {
 
     /**
      * get user lis
+     *
      * @return
      */
     @GetMapping("/list")

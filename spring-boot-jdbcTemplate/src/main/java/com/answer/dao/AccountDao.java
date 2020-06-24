@@ -13,6 +13,7 @@ public interface AccountDao {
 
     /**
      * 添加
+     *
      * @param account
      * @return
      */
@@ -20,6 +21,7 @@ public interface AccountDao {
 
     /**
      * 更新
+     *
      * @param account
      * @return
      */

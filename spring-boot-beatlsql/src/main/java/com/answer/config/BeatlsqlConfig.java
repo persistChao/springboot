@@ -94,6 +94,7 @@ public class BeatlsqlConfig {
 
     /**
      * 配置数据库
+     *
      * @return
      */
     @Bean(name = "datasource")

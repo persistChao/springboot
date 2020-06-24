@@ -9,7 +9,7 @@ spring:
     content-type: text/html
     enabled: true
     encoding: utf-8
-#    excluded-view-names:
+    #    excluded-view-names:
     mode: HTML5
     prefix: classpath:/templates/
     suffix: .html

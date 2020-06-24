@@ -1,11 +1,13 @@
 package com.answer.entity;
 
 import java.io.Serializable;
+
 import org.hibernate.validator.constraints.NotEmpty;
 
 /**
  * account
- * @author 
+ *
+ * @author
  */
 public class Account implements Serializable {
     private Integer id;
@@ -54,8 +56,8 @@ public class Account implements Serializable {
         }
         Account other = (Account) that;
         return (this.getId() == null ? other.getId() == null : this.getId().equals(other.getId()))
-            && (this.getName() == null ? other.getName() == null : this.getName().equals(other.getName()))
-            && (this.getMoney() == null ? other.getMoney() == null : this.getMoney().equals(other.getMoney()));
+                && (this.getName() == null ? other.getName() == null : this.getName().equals(other.getName()))
+                && (this.getMoney() == null ? other.getMoney() == null : this.getMoney().equals(other.getMoney()));
     }
 
     @Override
